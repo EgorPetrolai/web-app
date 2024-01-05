@@ -6,7 +6,6 @@ class Articles(models.Model):
         ('BYN', 'BYN'),
         ('RUB', 'RUB'),
         ('USD', 'USD'),
-        ('asd', 'USD'),
     )
     title = models.CharField('Название кошелька', max_length=20, default='')
     money = models.FloatField('Сумма', default=0)
