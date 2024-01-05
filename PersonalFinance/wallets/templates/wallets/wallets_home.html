@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Активные кошельки{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>Активные кошельки</h1>
+        <a href="{% url 'add_new_wallet' %}"><button type="button" class="btn btn-outline-warning">Добавить кошелек</button></a>
+        {% for el in wallets %}
+            <div class="wallet"> <!-- Добавляем класс на основе названия кошелька -->
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.money }}</p>
+                <p>{{ el.currency }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
