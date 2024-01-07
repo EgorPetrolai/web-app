@@ -1,84 +1,85 @@
-body {
-    background: #c9c5bb;
-    display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
 }
 
-html {
-    height: 100%;
+li, a, button{
+    font-family: "Montserrat", sans-serif;\
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1
+    text-decoration: none;
 }
 
-main {
-    width: 70%;
-}
-
-aside {
-    -ms-overflow-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #454545;
-    width: 30%;
-    padding: 2.5%;
+.logo{
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;\
+    font-weight: 500;
+    font-size: 16px;
     color: #fff;
-    border-right: 5px solid #96938d;
+    text-decoration: none;
 }
 
-@media screen and (max-width: 1100px) {
-  body {
-    flex-direction: column;
-  }
-
-  aside {
+header{
+    position: fixed;
+    top: 0;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    overflow: initial;
-  }
-
-  main {
-    width: 100%;
-}
+    padding: 30px 10%;
+     box-shadow: 8px 10px 20px 5px rgba(0, 0, 0, .2);
 }
 
-aside::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
-}
-
-aside img {
-    width: 120px;
-    height: 120px;
-}
-
-aside .logo {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-aside h3 {
-    margin-top: 100px;
-    font-size: 32px;
-}
-
-aside ul {
+.nav__links{
     list-style: none;
-    font-size: 26px;
+    margin-bottom: 0;
 }
 
-aside ul li {
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
     color: #fff;
-    display: block;
-    margin-top: 5px;
-    transition: transform .2s ease;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
 }
 
-aside ul li:hover, aside ul a:hover {
-    color: #cfa757;
-    transform: scale(1.02)
+.nav__links li a:hover{
+    color: #0088a9
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0,136,169,0.8);
+}
+
+main{
+    display: flex;
+    margin-top: 10vh;
+}
+
+main span{
+    color: #fff;
 }
 
 main .features {
     float: left;
     color: #fff;
-    margin-top: 100px;
     text-align: center;
     width: 75%;
 }
@@ -90,6 +91,7 @@ form {
     margin-left: 30%;
     width: 500px;
 }
+
 .wallet {
     border: 1px solid #ccc;
     padding: 10px;
