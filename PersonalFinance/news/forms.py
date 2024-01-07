@@ -9,18 +9,24 @@ class ArticlesForm(ModelForm):
         widgets = {
             "title": TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Название кошелька',
+                'placeholder': 'Заголовок',
+            }),
+            "subtitle": TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Описание',
             }),
 
             "fulltext": TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Название кошелька',
+                'placeholder': 'Текст новости',
             }),
             "date": TextInput(attrs={
-
+                'class': 'form-control',
+                'placeholder': 'Дата',
             }),
             "time": TextInput(attrs={
-
+                'class': 'form-control',
+                'placeholder': 'Время',
             }),
 
         }
