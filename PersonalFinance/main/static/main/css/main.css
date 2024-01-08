@@ -25,7 +25,7 @@ li, a, button{
 }
 
 header{
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
     width: 100%;
     display: flex;
@@ -66,34 +66,4 @@ button {
 
 button:hover{
     background-color: rgba(0,136,169,0.8);
-}
-
-main{
-    display: flex;
-    margin-top: 10vh;
-}
-
-main span{
-    color: #fff;
-}
-
-main .features {
-    float: left;
-    color: #fff;
-    text-align: center;
-    width: 75%;
-}
-
-main .features h1 {font-size: 50px;}
-main .features p {max-width: 400px; margin: 20px auto;}
-
-form {
-    margin-left: 30%;
-    width: 500px;
-}
-
-.wallet {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
 }
