@@ -1,18 +1,13 @@
 {% extends 'main/layout.html' %}
-
-{% block title %}Активные кошельки{% endblock %}
-
 {% block content %}
-    <div>
-        <span>Новости</span>
-        <a href="{% url 'add_new_news' %}"><button type="button" class="btn btn-outline-warning">Добавить новость</button></a>
-        {% for el in wallets %}
-            <div class="wallet"> <!-- Добавляем класс на основе названия кошелька -->
-                <h3>{{ el.title }}</h3>
-                <p>{{ el.
-                    }}</p>
-                <p>{{ el.currency }}</p>
-            </div>
-        {% endfor %}
+  <h2>Новости</h2>
+  {% for new in news %}
+    <div class="vision_news">
+      <h3>{{ new.title }}</h3>
+      <p>{{ new.subtitle }}</p>
+      <p>{{ new.fulltext }}</p>
+      <p>{{ new.date }} {{ new.time }}</p>
+      <p>Автор новости: {{ new.user }}</p>
     </div>
+  {% endfor %}
 {% endblock %}

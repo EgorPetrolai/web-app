@@ -13,17 +13,15 @@
 </head>
 <body>
     <header>
-        <div class="logo">Actual News</div>
+        <a href="{% url 'main' %}"><div class="logo">Actual News</div></a>
         <nav>
             <ul class="nav__links">
-                <li><a href="{% url 'login' %}"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i> Profile</a></li>
                 <li><a href="{% url 'news_home' %}"><i class="fa-solid fa-wallet"></i> News</a></li>
                 <li><a href="{% url 'about' %}"><i class="fa-solid fa-circle-info"></i> About us</a></li>
             </ul>
-
         </nav>
-        <a href=""><button>Contact</button></a>
-    </header>+
+    </header>
     <main>
         {% block content %}
         {% endblock %} 

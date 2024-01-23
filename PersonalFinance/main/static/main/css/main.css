@@ -7,32 +7,13 @@
     background-color: #24252A;
 }
 
-li, a, button{
-    font-family: "Montserrat", sans-serif;\
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1
-    text-decoration: none;
-}
-
-.logo{
-    cursor: pointer;
-    font-family: "Montserrat", sans-serif;\
-    font-weight: 500;
-    font-size: 16px;
-    color: #fff;
-    text-decoration: none;
-}
-
 header{
-    /*position: fixed;*/
-    top: 0;
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-     box-shadow: 8px 10px 20px 5px rgba(0, 0, 0, .2);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .4);
 }
 
 .nav__links{
@@ -54,6 +35,40 @@ header{
 .nav__links li a:hover{
     color: #0088a9
 }
+
+.logo{
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;\
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    background-color: #24252A;
+    margin: 1% 1%;
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;\
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1
+    text-decoration: none;
+}
+
+.vision_news, p, h3, h2{
+    color: #fff;
+}
+
+main {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .4);
+    margin-top: 3%;
+    padding: 3%;
+}
+
+
 
 button {
     padding: 9px 25px;

@@ -1,31 +1,25 @@
-from django.shortcuts import render, redirect
-from .models import Articles
-from .forms import ArticlesForm
+
+from .models import Article
+from .forms import ArticleForm
 from django.views.generic import DetailView
-
-
-class WalletDetailView(DetailView):
-    model = Articles
-    template_name = 'news/details_view.html'
-    context_object_name = 'article'
-
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from .forms import ArticleForm
 def news_home (request):
-    news = Articles.objects.all()
+    news = Article.objects.all()
     return render(request, 'news/news_home.html', {'news': news})
 
-def add_new_news(request):
-    error = ''
-    if request.method == 'POST':
-        form = ArticlesForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('news_home')
-        else:
-            error = 'Форма была неверной'
 
-    form = ArticlesForm()
-    data = {
-        'form': form,
-        'error': error
-    }
-    return render(request, 'news/add_new_news.html', data)
+@login_required
+def add_new_news(request):
+    if request.method == 'POST':
+        form = ArticleForm(request.POST)
+        if form.is_valid():
+            article = form.save(commit=False)
+            article.user = request.user
+            article.save()
+            return redirect('news_home')  # Измените на вашу домашнюю страницу новостей
+    else:
+        form = ArticleForm()
+
+    return render(request, 'news/add_new_news.html', {'form': form})
