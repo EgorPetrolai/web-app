@@ -3,5 +3,8 @@
 {% block title %}Пользователь{% endblock %}
 
 {% block content %}
-<p>Profile view</p>
+
+<a href="{% url 'signin' %}"><p>Sign in</p></a>
+<a href="{% url 'signup' %}"><p>Sign up</p></a>
+
 {% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Выход{% endblock %}
+
+{% block content %}
+<p>Вы успешно вышли из системы.</p>
+<a href="{% url 'signin' %}">Войти снова</a>
+{% endblock %}
